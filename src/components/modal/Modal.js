@@ -2,12 +2,14 @@ import React from 'react'
 import "./Modal.css"
 import { AiOutlineClose, AiOutlineInfoCircle } from "react-icons/ai";
 
-const Modal = () => {
+// Pass in a prop as a destructured object. We will use the prop to pass in the onCloseModal prop, which we created and passed in via App.js
+const Modal = ({ onCloseModal }) => {
   return (
-    <section className='modal-section --100vh'>
+    // modal section creates the overlay of the black background on top of the main screen
+    <section className='modal-section --100vh' onClick={onCloseModal}>
       <div className='modal --flex-center'>
         <div className='modal-content --bg-light --p --card'>
-          <AiOutlineClose color="red" size={16} className='close-icon'/>
+          <AiOutlineClose color="red" size={16} className='close-icon' onClick={onCloseModal}/>
           
           <div className='modal-header --flex-start'>
             <AiOutlineInfoCircle color="orangered" size={18}/>
@@ -19,7 +21,7 @@ const Modal = () => {
           </div>
 
           <div className='modal-footer --flex-end'>
-            <button className='--btn'>Cancel</button>
+            <button className='--btn' onClick={onCloseModal}>Cancel</button>
             <button className='--btn --btn-primary'>Proceed</button>
           </div>
         </div>

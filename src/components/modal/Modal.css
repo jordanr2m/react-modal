@@ -14,7 +14,7 @@
     min-width: 350px;
     position: relative;
     animation: slide-down ease 0.5s;
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
 }
 
 .modal-content .close-icon {
