@@ -1,0 +1,47 @@
+.modal-section {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+.modal-content {
+    width: 30%;
+    min-width: 350px;
+    position: relative;
+    animation: slide-down ease 0.5s;
+    padding: 1.5rem;
+}
+
+.modal-content .close-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--color-dark);
+    border-radius: 50%;
+    padding: 2px;
+    cursor: pointer;
+}
+
+/* Animation to make modal window slide down from the top */
+@keyframes slide-down {
+    0% {
+        transform: translateY(-30rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .modal-header {
+        flex-direction: row;
+    }
+}

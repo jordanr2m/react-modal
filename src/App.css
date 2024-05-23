@@ -372,7 +372,17 @@ p {
 
 /* JORDAN'S STYLES!!!!! Added here instead of in a SASS file */
 /* In the video, he shows using SASS to next styles */
+.intro-section {
+  background: rgb(99,185,233);
+  background: linear-gradient(-45deg, rgba(99,185,233,1) 40%, rgba(99,102,228,1) 70%);
+}
 
+.intro img {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
 
 
 
