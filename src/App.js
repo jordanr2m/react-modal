@@ -11,8 +11,12 @@ function App() {
     setShowModal(true);
   }
 
-  const handleCloseModal = () => {
-    setShowModal(false);
+  // We pass in the event so that we can target the element that was clicked on. If the element that was clicked on has the class name, close-modal, then close the modal. Otherwise, don't close it if another element is clicked on
+  const handleCloseModal = (e) => {
+    if (e.target.classList.contains("close-modal")) {
+      console.log("close-modal class exists here");
+      setShowModal(false);
+    }
   }
 
   return (
